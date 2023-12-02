@@ -19,8 +19,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
-                        More
+                    <a href="">More
                         <i class="nav-arrow-down ti-angle-down"></i>
                     </a>
                     <ul class="subnav">
@@ -42,6 +41,18 @@
             <div class="text-content">
                 <h2 class="text-heading">Los Angeles</h2>
                 <div class="text-description">We had the best time playing at Venice Beach!</div>
+            </div>
+        </div>
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">New York</h2>
+                <div class="text-description">The atmosphere in New York is lorem ipsum.</div>
+            </div>
+        </div>
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">Chicago</h2>
+                <div class="text-description">Thank you, Chicago - A night we won't forget.</div>
             </div>
         </div>
 
@@ -244,8 +255,28 @@
         modalContainer.addEventListener('click',function (event ) {
             event.stopPropagation(modalContainer)
         } )
-
     </script>
-
+    <script>
+        const sliderImages = [
+            "./assets/img/slider/chicago.jpg",
+            "./assets/img/slider/new_york.jpg",
+            "./assets/img/slider/los_angeles.jpg"
+        ];
+    
+        let currentImageIndex = 0;
+    
+        function updateSlider() {
+            const slider = document.getElementById("slider");
+            slider.style.backgroundImage = `url('${sliderImages[currentImageIndex]}')`;
+            currentImageIndex++;
+            if (currentImageIndex === sliderImages.length) {
+                currentImageIndex = 0;
+            }
+            setTimeout(updateSlider, 5000); // 5000 milliseconds = 5 seconds
+        }
+    
+        // Gọi hàm để bắt đầu chuyển đổi hình ảnh trong slider
+        updateSlider();
+    </script>
 </body>
 </html>

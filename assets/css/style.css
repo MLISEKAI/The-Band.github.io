@@ -347,7 +347,7 @@ html {
 .modal-close {
     position: absolute;
     right: 0;
-    top: 0; 
+    top: 0;
     color: #ffff;
     padding: 16px;
     cursor: pointer;
@@ -497,5 +497,3 @@ html {
 @media (max-with: 46.1875em){}
 
 
-
-flex-
