@@ -480,20 +480,6 @@ html {
 #footer .copy-right a {
     color: rgba(0, 0,0,0.6);
 }
-/* Break point */
-/* PC >= 46.1875em */
-/* @media (min-with: 46.1875em){} */
-/* 64em > Taplet >= 46.25em */
-@media (min-with: 46.25em) and (max-with: 63.9375em) {
-    .media {
-        display: none;
-    }
-}
-/* 46.25em < Mobi >= 0 */
-@media (max-with: 46.25em){
 
-}
-/* Mobi & Taplet: with < 46.1875em */
-@media (max-with: 46.1875em){}
 
 
